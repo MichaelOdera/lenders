@@ -178,3 +178,18 @@ select {
     width: 40%;
 
 }
+
+input[type=submit]{
+    padding: 1%;
+    width: 50%;
+    color: white;
+    font-weight: bold;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+input[type=submit]:hover{
+    background-color: red;
+}
+
+input
