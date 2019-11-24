@@ -1,0 +1,180 @@
+.container {
+    background-image: url("https://i.pinimg.com/236x/6f/02/c0/6f02c02232781d533d4df5ddd2e38c75.jpg");
+    background-size: cover;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    color: white;
+    align-items: center;
+    text-align: center;
+}
+
+#overlay {
+    padding-top: 10%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#header img {
+    border-radius: 10px;
+    border: 1px solid red;
+    border-radius: 15px;
+}
+
+#navigation {
+    margin-left: 25%;
+}
+
+#navigation ul {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+
+#navigation ul li {
+    list-style: none;
+    display: inline-block;
+    width: 10%;
+    margin-right: 200px;
+    margin-bottom: 5%;
+}
+
+#navigation ul li a {
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-left: 30%;
+    margin-top: 50%;
+    margin-bottom: 50%;
+    padding: 4%;
+    color: white;
+}
+
+#navigation ul li a:hover {
+    color: white;
+    background: red;
+    border: transparent;
+}
+
+#header {
+    font-size: 150%;
+}
+
+#about {
+    overflow: hidden;
+    padding: 1%;
+    margin-bottom: 1%;
+}
+
+#about img {
+    width: 50%;
+    transition: 0.2s;
+}
+
+#about img:hover,
+#work img:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+    box-shadow: 0 0 3px 3px red;
+}
+
+#about-paragraph {
+    width: 50%;
+    margin-left: 25%;
+    border: 2px solid white;
+    padding: 0.2%;
+    border-radius: 15px;
+}
+
+#about-paragraph a,
+#work a {
+    float: left;
+    font-size: 36px;
+    color: white;
+    margin-left: 2%;
+    clear: both;
+    transition: 0.3s;
+}
+
+#about-paragraph,
+#work {
+    font-size: 170%;
+}
+
+#about-paragraph:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#about-paragraph button,
+#work button {
+    color: white;
+    background: transparent;
+    border: 2px solid white;
+    padding: 2%;
+    width: 140px;
+    outline: none;
+    border-radius: 10px;
+}
+
+#about-paragraph button:hover,
+#work button:hover {
+    padding-left: 5%;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    border: none;
+}
+
+#work {
+    width: 50.5%;
+    margin-left: 25%;
+    margin-bottom: 1%;
+}
+
+#work img {
+    width: 100%;
+    transition: 0.2s;
+}
+
+#work ul li {
+    padding: 2%;
+    list-style: none;
+    ;
+}
+
+#work ul li {
+    overflow: hidden;
+}
+
+#work ul li {
+    font-size: 100%;
+}
+
+hr {
+    width: 80%;
+    color: red;
+    transition: .3s;
+}
+
+hr:hover {
+    width: 90%;
+    transition: 0.2s;
+}
+
+select {
+    background-color: black;
+    padding: 1%;
+    color: white;
+    font-size: 50%;
+    width: 40%;
+
+}
