@@ -108,6 +108,7 @@
 #about-paragraph,
 #work {
     font-size: 170%;
+    padding: 1%;
 }
 
 #about-paragraph:hover {
@@ -180,13 +181,14 @@ select {
 }
 
 input[type=submit]{
-    padding: 1%;
+    padding: 0.4%;
     width: 50%;
     color: white;
     font-weight: bold;
     outline: none;
     background-color: rgba(0, 0, 0, 0.8);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 10px;
 }
 input[type=submit]:hover{
     background-color: red;
@@ -194,5 +196,5 @@ input[type=submit]:hover{
 
 input[type=text]{
     width: 60%;
-    
+    background-color: #C1C3CD;
 }
