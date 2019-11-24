@@ -138,6 +138,7 @@
     width: 50.5%;
     margin-left: 25%;
     margin-bottom: 1%;
+    padding: 1%;
 }
 
 #work img {
@@ -176,5 +177,26 @@ select {
     color: white;
     font-size: 50%;
     width: 40%;
+
+}
+input[type="phone"]{
+    width: 50%;
+    height: 6%;
+    background-color: #C1C3CD;
+}
+
+input[type=submit]{
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1%;
+    border-radius: 10px;
+    outline: none;
+    width: 40%;
+    color: white;
+    font-weight: bolder;
+}
+
+input[type=submit]:hover{
+    background-color: red;
+    color: white;
 
 }
