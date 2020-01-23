@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("img").click(function(){
+    $(this).toggle();
+    $("h1").toggle();
+  });
+  $("h1").click(function(){
+  	$(this).toggle();
+    $('img').toggle();
+    
+    
+  })
+});
+</script>
+<style>
+	h1{
+    	display: none;
+        border: 2px solid black;
+        width: 400px;
+        height: 150px;
+        text-align: center;
+        padding-top: 130px;
+    }
+    img{
+    	height: 300px;
+        width: 400px;
+    }
+</style>
+</head>
+<body>
+
+<img src="https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+<h1>Show me</h1>
+
+
+</body>
+</html>
