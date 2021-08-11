@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script
-        id="mcjs">!function (c, h, i, m, p) {m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p)}(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/dc5e45cec4971bf674ca01a45/b81a983f6991b171342519c8b.js");</script>
+        id="mcjs">!function (c, h, i, m, p) { m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p) }(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/dc5e45cec4971bf674ca01a45/b81a983f6991b171342519c8b.js");</script>
 
 </head>
 
@@ -67,37 +67,66 @@
                         Since we offer car hiring services, here are the steps required for you to take, and your needs
                         will
                         be sorted.<br>
-                        <ul>
-                            <li>Choose from our Vehicle fleet<br>
-                                <select>
-                                    <option>Sedan</option>
-                                    <option>Range Rover</option>
-                                    <option>Mercedes</option>
-                                    <option>Limousine</option>
-                                </select>
-                            </li>
-                            <li>Choose the range of number of cars you plan to hire<br>
-                                <select>
-                                    <option>5-10</option>
-                                    <option>10-15</option>
-                                    <option>0-5</option>
-                                    <option>20-30</option>
-                                </select>
-                            </li>
-                        </ul>
+                    <ul>
+                        <li>Choose from our Vehicle fleet<br>
+                            <select>
+                                <option>Sedan</option>
+                                <option>Range Rover</option>
+                                <option>Mercedes</option>
+                                <option>Limousine</option>
+                            </select>
+                        </li>
+                        <li>Choose the range of number of cars you plan to hire<br>
+                            <select>
+                                <option>5-10</option>
+                                <option>10-15</option>
+                                <option>0-5</option>
+                                <option>20-30</option>
+                            </select>
+                        </li>
+                    </ul>
                     </p>
                     <br>
-                    <label for="phone">Enter Phone Number:</label><br>
-                    <input type="phone" name="phone" placeholder="Phone number.." required><br><br>
+                    <div>
+                        <label for="fname">First Name</label><br>
+                        <input type="text" id="fname" name="firstname" placeholder="First name.." required><br><br>
 
-                    <input type="submit" name="submit" value="SUBMIT">
+                        <label for="lname">Last Name</label><br>
+                        <input type="text" id="lname" name="lastname" placeholder="Last name.." required><br><br>
+
+                        <label for="phone">Enter Phone Number:</label><br>
+                        <input type="text" id="phone" name="phone" placeholder="Phone number.." required><br><br>
+                    </div>
+
+
+                    <button type="submit" id="submit">SUBMIT</button>
 
             </div>
+
+            <p id="message"></p>
 
 
         </div>
 
     </div>
+
+    <script>
+        $(document).ready(function () {
+            // Get value on button click and show alert
+            alert("Button is clicked")
+            $("#submit").click(function () {
+                var firstname = $("#fname").val();
+                var lastname = $("#lname").val();
+                var phonenumber = $("#phone").val();
+
+                if(lastname !== "" && firstname !== "" && phonenumber !== ""){
+                    document.getElementById("message").innerHTML = "Dear "+firstname+", Your details have been received and a confirmation message will be sent to "+phonenumber;
+                }
+
+                
+            });
+        });
+    </script>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="/__/firebase/7.6.1/firebase-app.js"></script>

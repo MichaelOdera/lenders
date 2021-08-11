@@ -180,9 +180,11 @@ select {
 
 }
 input[type="phone"]{
-    width: 50%;
-    height: 6%;
-    background-color: #C1C3CD;
+    width: 70%;
+    background-color: #ffffff;
+    background-color: black;
+    color: white;
+
 }
 
 input[type=submit]{
@@ -195,8 +197,28 @@ input[type=submit]{
     font-weight: bolder;
 }
 
-input[type=submit]:hover{
+/* input[type=submit]:hover{
     background-color: red;
+    padding: 1%;
+    border-radius: 10px;
+    outline: none;
+    width: 40%;
     color: white;
+    font-weight: bolder;
+} */
 
+
+input[type=text], select {
+    width: 60%;
+    padding: 15px 20px;
+    margin: 8px 0;
+    background-color: black;
+    color: #ffffff;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
+  
+
+  
