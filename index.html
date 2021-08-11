@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-   
+
 
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -100,22 +100,22 @@
 
                         <label for="phone">Enter Phone Number:</label><br>
                         <input type="text" id="phone" name="phone" placeholder="Phone number.." required><br><br>
-                        <p id="errorPhone"></p></div>
+                        <p id="errorPhone"></p>
                     </div>
-
-
-                    <input type="submit" id="submit" onclick="submit()" value="SUBMIT" />
-
-
-                   <p id="message"></p>
-
             </div>
 
 
-
+            <input type="submit" id="submit" onclick="submit()" value="SUBMIT" />
+             <p id="message"></p>
 
 
         </div>
+       
+
+
+
+
+    </div>
 
     </div>
 
@@ -125,40 +125,43 @@
 
             var firstname = document.getElementById("fname").value;
             var lastname = document.getElementById("lname").value;
+            phonenumberText = document.getElementById("phone").value;
             var phonenumber = parseInt(document.getElementById("phone").value);
 
-            var fleet = document.getElementById("fleet").value;
-            var cars = document.getElementById("number").value;
 
-            if(firstname === ""){
-                document.getElementById("firstNameError").innerHTML = "First name is required"
+
+            if (lastname !== "" && firstname !== "" && !isNaN(phonenumber) && phonenumberText !== "") {
+                document.getElementById("errorPhone").innerHTML = "";
+                document.getElementById("lastNameError").innerHTML = "";
+                document.getElementById("firstNameError").innerHTML = "";
+                document.getElementById("errorPhone").innerHTML = "";
+                document.getElementById("message").innerHTML = "Dear " + firstname + ", Your details have been received and a confirmation message will be sent to " + phonenumber;
+            } else {
+                if (firstname === "") {
+                    document.getElementById("firstNameError").innerHTML = "First name is required";
+                }
+
+                if (lastname === "") {
+                    document.getElementById("lastNameError").innerHTML = "Last name is required";
+                }
+
+                if (phonenumberText === "") {
+                    document.getElementById("errorPhone").innerHTML = "Number is required";
+                }
+
+                if (isNaN(phonenumber)) {
+                    document.getElementById("errorPhone").innerHTML = "Please enter valid phone input";
+                }
+
+
             }
 
-            if(lastname === ""){
-                document.getElementById("lastNameError").innerHTML = "Last name is required"
-            }
-
-            if( phonenumber instanceof Number){
-                 document.getElementById("errorPhone").innerHTML="Please enter valid phone input" 
-            }
-
-            if (lastname !== "" && firstname !== "" && phonenumber instanceof Number) {
-
-                    document.getElementById("errorPhone").innerHTML = "";
-                    document.getElementById("lastNameError").innerHTML = "";
-                    document.getElementById("firstNameError").innerHTML = "";
-                    document.getElementById("message").innerHTML = "Dear " + firstname + ", Your details have been received and a confirmation message will be sent to " + phonenumber;
-            
-                
-
-           }
-           
 
         };
 
     </script>
 
-    
+
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="/__/firebase/7.6.1/firebase-app.js"></script>
