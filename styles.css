@@ -222,8 +222,9 @@ input[type=text], select {
 
 #message {
     background-color: rgb(103, 231, 103);
-    color: white;
+    color: black;
     font-size: medium;
+    font-weight: 500;
 }
 
 #errorPhone, #lastNameError, #firstNameError {
