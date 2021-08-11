@@ -192,20 +192,20 @@ input[type=submit]{
     padding: 1%;
     border-radius: 10px;
     outline: none;
-    width: 40%;
+    width: 20%;
     color: white;
     font-weight: bolder;
 }
 
-/* input[type=submit]:hover{
+input[type=submit]:hover{
     background-color: red;
     padding: 1%;
     border-radius: 10px;
     outline: none;
-    width: 40%;
+    width: 20%;
     color: white;
     font-weight: bolder;
-} */
+}
 
 
 input[type=text], select {
@@ -218,6 +218,17 @@ input[type=text], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+#message {
+    background-color: rgb(103, 231, 103);
+    color: white;
+    font-size: medium;
+}
+
+#errorPhone, #lastNameError, #firstNameError {
+    color: red;
+    font-size: medium;
 }
   
 

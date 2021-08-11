@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+   
+
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script
@@ -69,7 +71,7 @@
                         be sorted.<br>
                     <ul>
                         <li>Choose from our Vehicle fleet<br>
-                            <select>
+                            <select id="fleet">
                                 <option>Sedan</option>
                                 <option>Range Rover</option>
                                 <option>Mercedes</option>
@@ -77,7 +79,7 @@
                             </select>
                         </li>
                         <li>Choose the range of number of cars you plan to hire<br>
-                            <select>
+                            <select id="number">
                                 <option>5-10</option>
                                 <option>10-15</option>
                                 <option>0-5</option>
@@ -90,20 +92,27 @@
                     <div>
                         <label for="fname">First Name</label><br>
                         <input type="text" id="fname" name="firstname" placeholder="First name.." required><br><br>
+                        <p id="firstNameError"></p>
 
                         <label for="lname">Last Name</label><br>
                         <input type="text" id="lname" name="lastname" placeholder="Last name.." required><br><br>
+                        <p id="lastNameError"></p>
 
                         <label for="phone">Enter Phone Number:</label><br>
                         <input type="text" id="phone" name="phone" placeholder="Phone number.." required><br><br>
+                        <p id="errorPhone"></p></div>
                     </div>
 
 
-                    <button id="submit">SUBMIT</button>
+                    <input type="submit" id="submit" onclick="submit()" value="SUBMIT" />
+
+
+                   <p id="message"></p>
 
             </div>
 
-            <p id="message"></p>
+
+
 
 
         </div>
@@ -111,22 +120,45 @@
     </div>
 
     <script>
-        $(document).ready(function () {
-            // Get value on button click and show alert
-            alert("Button is clicked")
-            $("#submit").click(function () {
-                var firstname = $("#fname").val();
-                var lastname = $("#lname").val();
-                var phonenumber = $("#phone").val();
 
-                if(lastname !== "" && firstname !== "" && phonenumber !== ""){
-                    document.getElementById("message").innerHTML = "Dear "+firstname+", Your details have been received and a confirmation message will be sent to "+phonenumber;
-                }
+        function submit() {
 
+            var firstname = document.getElementById("fname").value;
+            var lastname = document.getElementById("lname").value;
+            var phonenumber = parseInt(document.getElementById("phone").value);
+
+            var fleet = document.getElementById("fleet").value;
+            var cars = document.getElementById("number").value;
+
+            if(firstname === ""){
+                document.getElementById("firstNameError").innerHTML = "First name is required"
+            }
+
+            if(lastname === ""){
+                document.getElementById("lastNameError").innerHTML = "Last name is required"
+            }
+
+            if( phonenumber instanceof Number){
+                 document.getElementById("errorPhone").innerHTML="Please enter valid phone input" 
+            }
+
+            if (lastname !== "" && firstname !== "" && phonenumber instanceof Number) {
+
+                    document.getElementById("errorPhone").innerHTML = "";
+                    document.getElementById("lastNameError").innerHTML = "";
+                    document.getElementById("firstNameError").innerHTML = "";
+                    document.getElementById("message").innerHTML = "Dear " + firstname + ", Your details have been received and a confirmation message will be sent to " + phonenumber;
+            
                 
-            });
-        });
+
+           }
+           
+
+        };
+
     </script>
+
+    
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="/__/firebase/7.6.1/firebase-app.js"></script>
